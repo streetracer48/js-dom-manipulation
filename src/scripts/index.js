@@ -1,77 +1,26 @@
-// // import '../styles/index.scss'
+let btn = document.querySelector('#btns')
 
-// import { sum, sub  } from './math'
+let para= document.querySelector('#para')
 
+let isShown = false
 
-// let headers=document.getElementsByTagName('h1');
-// console.log(headers);
+btn.addEventListener('click', function() {
 
-// let classes=document.getElementsByClassName('my-para')
-// console.log(classes);
-// let id= document.getElementById('h1');
-// console.log(id);
-// let btn =$('#click-me');
-// console.log(btn.style);
-// let colors = ['red', 'green','yellow', 'blue']
-// let i=0;
-
-// btn.addEventListener('click', function()
-// {
-//     let h1 = $('#my-h1');
-//     h1.innerHTML="new welcome Dom hehehe :/";
-//     h1.style.background = colors[i];
-// if( i>= colors.length)
-// {
-//     i=0
-// }
-// else {
-// i++
-
-// }
-
-// alert("i am not working hehehe :/");
-
-// })
-
-// function $(selector) {
-//     return document.querySelector(selector);
-// }
+ if(isShown)
+ {
+    para.style.visibility = 'hidden'
+    isShown = false
+    btn.innerHTML='show'
 
 
+ }
+ else
+ {
+     para.style.visibility = 'visible'
+isShown =true
+btn.innerHTML='hide'
 
-// let container = document.querySelectorAll('.container')
-// console.log(container)
+ }
 
-let h1 =$('#my-h1')
-
-// h1.style.background='salmon'
-// h1.style.fontSize='26px'
-// h1.style.fontFamiliy='Arial'
-
-let h1style = {
-   background:'salmon',
-fontFamiliy:'Arial',
-fontSize:'26',
-padding:'20px',
-textAlign:'center'
-}
-
-function $(selector){
-   return document.querySelector(selector)
-}
-
-Object.assign(h1.style, h1style)
-
-let p =$('#my-para')
-
-let pstyle = {
-    background:'green',
-    fontFamiliy:'Arial',
-    fontSize:'14',
-    padding:'20px',
-    textAlign:'center'
-}
-
-Object.assign(p.style, pstyle);
-
+})
 
